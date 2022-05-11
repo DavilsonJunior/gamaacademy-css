@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   outline: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #a09038;
 }
 
 ul {
@@ -11,4 +15,193 @@ ul {
 
 a {
   text-decoration: none;
+  font-weight: 700;
+}
+
+body {
+  background: #1D4350;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header {
+  max-height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  /* border-bottom: 15px ridge #FFF; */
+  box-shadow: 0px 7px 14px -8px rgba(0,0,0,0.33);
+-webkit-box-shadow: 0px 7px 14px -8px rgba(0,0,0,0.33);
+-moz-box-shadow: 0px 7px 14px -8px rgba(0,0,0,0.33);
+
+margin-bottom: 80px;
+}
+
+header div {  
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+header div img {  
+  max-height: 100px;
+  border-radius: 60px;
+  box-shadow: -11px -13px 27px -8px rgba(0,0,0,0.33);
+-webkit-box-shadow: -11px -13px 27px -8px rgba(0,0,0,0.33);
+-moz-box-shadow: -11px -13px 27px -8px rgba(0,0,0,0.33);
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  padding: 5px;
+}
+
+header ul li a {
+  transition: 300ms;
+}
+
+header ul li a:hover {
+  color: #c0a717;
+}
+
+main {
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+}
+
+.container .name h1 {
+  font-size: 60px;
+}
+
+.container .name h5 {
+  font-size: 25px;
+}
+
+#arrow {
+  font-size: 35px;
+  cursor: pointer;
+  animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }  
+}
+
+#animation {
+  transition: 300ms;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: 300ms;
+}
+
+.active {
+  display: block !important;
+}
+
+#about p {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.form {
+  width: 40%;
+  margin: 30px auto;
+}
+
+.form input {
+  width: 50%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  margin-top: 20px;
+}
+
+.form button {
+  width: 15%;
+  padding: 5px 10px;
+  background: linear-gradient(to right, #c09717 50%, #9c551b 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: #FFF;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease-out;
+  border-radius: 0px 5px 5px 0px;
+  margin-left: -5px;
+}
+
+.form button:hover {
+  background-position: left bottom;
+}
+
+@media (max-width: 1000px) {
+  .form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 100%;
+  }
+  .container .name h1 {
+    font-size: 45px;
+  }
+
+  .container .name h5 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  header ul li {
+    padding: 3px;
+  }
+
+  header ul li a {
+    font-size: 12px;
+  }
+  
+  header div {  
+    height: 100px;
+    display: flex;
+    align-items: center;
+  }
+  
+  header div img {  
+    max-height: 80px;
+  }
+
+  .form input {
+    width: 60%;
+    padding: 5px 5px;
+  }
+  
+  .form button {
+    width: 25%;
+    padding: 5px 10px;
+    background: linear-gradient(to right, #c09717 50%, #9c551b 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: #FFF;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+    border-radius: 0px 5px 5px 0px;
+    margin-left: -5px;
+  }
 }

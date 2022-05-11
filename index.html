@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/d73291e359.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/d73291e359.js" crossorigin="anonymous"></script>  
+  <link rel="stylesheet" href="styles.css">  
   <title>Davilson Junior</title>
 </head>
 <body>
@@ -31,11 +31,11 @@
           <h1>Davilson Junior</h1>
           <h5>Full Stack Developer</h5>
         </div>
-        <div id="arrow">
-          <i class="fa-solid fa-caret-down"></i>
+        <div onclick="displayAbout()" id="arrow">
+          <i id="animation" class="fa-solid fa-caret-down"></i>
         </div>
-        <div id="about">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dignissimos rem consectetur ab. Adipisci harum, maiores modi vero itaque fuga magni, autem doloribus ipsa suscipit libero consequatur? Magnam, similique repellendus!</p>
+        <div style="display: none;" id="about">
+          <p>Sou o Davilson, tenho 28 anos. Tenho muito facilidade em aprender, sou flexivel, adaptável e lido muito bem com trabalho em equipe. Comecei minha área profissional no mundo da programação na faculdade onde me formei como Engenheiro da Computação. Tenho experiência como estágio em desenvolvimento web na Speedsoft, logo após entrei em um projeto remotamente na Bilion, como Desenvolvedor Full stack PHP. Participei como voluntário na DiagoNow, uma startup de soluções para saúde, e por ultimo na Café e Pixel, ambas como Desenvolvedor Front-end React.js. Atualmente estou desenvolvendo um projeto pessoal, um aplicativo de intermediação de serviços, o qual desenvolvo o Front-end web, Back-end e mobile do sistema.!</p>
         </div>
 
         <div class="form">
@@ -48,6 +48,15 @@
           </form>
         </div>
       </section>
-    </main>
+    </main>  
+    
+    <script>
+      function displayAbout() {
+        let arrow = document.getElementById('animation');
+        arrow.classList.toggle('rotate');
+        let display = document.getElementById('about');
+        display.classList.toggle('active');
+      }
+    </script>
 </body>
 </html>
